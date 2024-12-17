@@ -1,0 +1,142 @@
+.manager-container {
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+/* 头部样式 */
+.manager-header {
+    height: 60px;
+    background: linear-gradient(90deg, #304156, #485c7b);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.manager-header-left {
+    display: flex;
+    align-items: center;
+    width: 210px;
+}
+
+.logo-img {
+    height: 32px;
+    width: auto;
+    margin-right: 12px;
+}
+
+.title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.manager-header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.manager-header-right {
+    padding-right: 20px;
+}
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.avatar-container:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.username {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+/* 主体布局 */
+.manager-main {
+    padding-top: 60px;
+    display: flex;
+    min-height: calc(100vh - 60px);
+}
+
+/* 侧边栏样式 */
+.manager-sidebar {
+    width: 210px;
+    background-color: #304156;
+    box-shadow: 2px 0 6px rgba(0,21,41,.05);
+    z-index: 999;
+    transition: width 0.3s;
+}
+
+.sidebar-menu {
+    border: none;
+    height: 100%;
+}
+
+/* 主要内容区样式 */
+.manager-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Element UI 样式覆盖 */
+>>> .el-breadcrumb__inner,
+>>> .el-breadcrumb__inner a {
+    color: #fff !important;
+    font-weight: 400;
+}
+
+>>> .el-breadcrumb__separator {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+>>> .el-menu-item {
+    height: 50px;
+    line-height: 50px;
+}
+
+>>> .el-submenu__title {
+    height: 50px;
+    line-height: 50px;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    .manager-header-left .title {
+        display: none;
+    }
+
+    .manager-sidebar {
+        width: 64px;
+    }
+
+    .manager-content {
+        padding: 10px;
+    }
+
+    .username {
+        display: none;
+    }
+}
